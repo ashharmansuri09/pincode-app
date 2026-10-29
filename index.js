@@ -10,9 +10,9 @@ function verifyShopifySignature(req, res, next) {
   const secret = process.env.SHOPIFY_API_SECRET;
   const { signature, ...rest } = req.query;
 
-//   if (!secret || !signature) {
-//     return res.status(401).json({ ok: false, error: "Invalid signature" });
-//   }
+  if (!secret || !signature) {
+    return res.status(401).json({ ok: false, error: "Invalid signature" });
+  }
 
   const message = Object.keys(rest)
     .sort()
