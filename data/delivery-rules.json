@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "cutoffHourIST": 14,
+    "timezone": "Asia/Kolkata",
+    "skipSunday": true,
+    "defaultDays": 5,
+    "allowSameDayDelivery": false,
+    "showDeliveryDate": true,
+    "showDeliveryRange": false,
+    "deliveryDateFormat": "DD MMM",
+    "handlingDays": 0,
+    "minimumDeliveryDays": 1,
+    "maximumDeliveryDays": 10
+  },
+  "pincodes": {
+    "452001": { "city": "Indore", "days": 1, "enabled": true },
+    "452010": { "city": "Indore", "days": 1, "enabled": true }
+  },
+  "prefixes": {
+    "452": { "city": "Indore", "days": 2 },
+    "453": { "city": "Indore", "days": 2 },
+    "462": { "city": "Bhopal", "days": 3 },
+    "110": { "city": "Delhi", "days": 3 },
+    "400": { "city": "Mumbai", "days": 3 },
+    "411": { "city": "Pune", "days": 3 },
+    "560": { "city": "Bengaluru", "days": 4 },
+    "600": { "city": "Chennai", "days": 4 },
+    "700": { "city": "Kolkata", "days": 4 },
+    "500": { "city": "Hyderabad", "days": 4 }
+  },
+  "blocked": [],
+  "messages": {
+    "deliveryLabel": "Estimated delivery",
+    "unavailableMessage": "Delivery is currently unavailable for this pincode.",
+    "invalidPincodeMessage": "Please enter a valid 6-digit Indian pincode.",
+    "blockedPincodeMessage": "Delivery is not available at this location.",
+    "defaultCity": "India"
+  },
+  "rules": {
+    "pincodeLength": 6,
+    "countryCode": "IN",
+    "priority": ["blocked", "pincodes", "prefixes", "defaultDays"],
+    "cutoffBehavior": "nextDay",
+    "deliveryDaysType": "businessDays"
+  }
+}
